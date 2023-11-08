@@ -1,0 +1,11 @@
+.navbar img {
+    width: 1.2rem;
+}
+
+body{
+    background: url('/Clinicar/static/img/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
