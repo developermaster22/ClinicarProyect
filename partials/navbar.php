@@ -20,7 +20,7 @@
         <ul class="navbar-nav">
           <?php if (isset($_SESSION["user"])): ?>
             <li class="nav-item">
-              <a class="nav-link" href="home.php">Indice</a>
+              <a class="nav-link" href="home.php">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="add.php">Agregar Vehiculo</a>
@@ -34,6 +34,12 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="login.php">Buscar Cliente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="addservice.php">Agrega Servicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="statistics.php">Estadísticas</a>
             </li>
           <?php endif ?>
         </ul>

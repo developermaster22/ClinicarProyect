@@ -66,7 +66,7 @@
                 <input id="nombre" type="text" class="form-control" name="nombre" autocomplete="nombre" autofocus>
               </div>
             </div>
-
+            
             <div class="mb-3 row">
               <label for="telefono" class="col-md-4 col-form-label text-md-end">Telefono</label>
 

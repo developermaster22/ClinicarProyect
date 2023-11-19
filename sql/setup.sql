@@ -1,4 +1,4 @@
--- Active: 1665162857560@@localhost@3306@clinicar
+-- Active: 1665162857560@@localhost@3306
 
 CREATE DATABASE IF NOT EXISTS `clinicar` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `clinicar`;
@@ -94,7 +94,11 @@ CREATE TABLE contacts (
 INSERT INTO `vehiculo` (user_id,`patente`, `year`, `aceite`, `vol_aceite`, `color`, `modelo`, `motor`, `combustible`, `marca`, `filtro_aceite`, `filtro_aire`) VALUES
 (1,'G4-SD-41', 2017, NULL, NULL, 'GRIS', 'COROLLA', '3,0', 'BENCINA', 'TOYOTA', NULL, NULL);
 
-
+CREATE TABLE user_admin (
+id  INT AUTO_INCREMENT PRIMARY KEY,
+usuario VARCHAR(45),
+contraseña VARCHAR(45)
+);
 
 
 
