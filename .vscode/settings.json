@@ -12,5 +12,5 @@
     "editor.fontSize": 24,
     "editor.lineHeight": 26,
     "terminal.integrated.fontSize": 24,
-    "window.zoomLevel": 1
+    "window.zoomLevel": -2
 }

@@ -25,9 +25,9 @@
             <li class="nav-item">
               <a class="nav-link" href="add.php">Agregar Vehiculo</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="logout.php">Inicio</a>
-            </li>
+            </li> -->
           <?php else: ?>
             <li class="nav-item">
               <a class="nav-link" href="register.php">Agrega Cliente</a>
@@ -36,7 +36,7 @@
               <a class="nav-link" href="login.php">Buscar Cliente</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="addservice.php">Agrega Servicio</a>
+              <a class="nav-link" href="add_service.php">Agrega Servicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="statistics.php">Estadísticas</a>

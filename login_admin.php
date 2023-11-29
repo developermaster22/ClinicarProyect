@@ -14,8 +14,6 @@ try {
     die("Error de conexión: " . $e->getMessage());
 }
 
-// Iniciar sesión
-session_start();
 
 // Validar el formulario de inicio de sesión
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -47,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,8 +100,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
 </head>
+
 <body>
-    <form action="index.php" method="post" autocomplete="off">
+    <form action="login_admin.php" method="POST" >
         <h2>Iniciar Sesión</h2>
         <label for="usuario">Usuario:</label>
         <input type="text" name="usuario" id="usuario" required>
@@ -110,7 +110,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="contraseña">Contraseña:</label>
         <input type="password" name="contraseña" id="contraseña" required>
         <br>
-        <input type="submit" value="Iniciar Sesión">
-    </form>n
+        <div class="col-md-6 offset-md-4">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </form>
 </body>
+
 </html>
