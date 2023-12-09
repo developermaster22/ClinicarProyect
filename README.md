@@ -1,4 +1,4 @@
-# ClinicarProyect![imajen de autolavado](https://github.com/developermaster22/ClinicarProyect/assets/111548523/4b83496e-1de8-4ef8-bf5f-c08d01c6f3bd)
+# ClinicarProyect
 
 Solución enfocada al negocio "Clinicar" que optimiza y automatiza el registro de sus clientes.
 # Historias de usuario:
