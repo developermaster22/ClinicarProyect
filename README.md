@@ -3,6 +3,7 @@
 
 Solución enfocada al negocio "Clinicar" que optimiza y automatiza el registro de sus clientes.
 
+
 # Historias de usuario:
 1. Como dueño del taller automotriz , quiero poder registrar a nuevos clientes en el sistema para tener un registro digital de su información.
 
