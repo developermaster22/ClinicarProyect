@@ -1,5 +1,5 @@
 # ClinicarProyect 🚗
-                                ![Uploading Amarillo_Profesional_Gradiente_Desarrollo_de_App_Banner_Apaisado_1.png…]()
+                          ![Uploading Amarillo_Profesional_Gradiente_Desarrollo_de_App_Banner_Apaisado_1.png…]()
 
 
 Solución enfocada al negocio "Clinicar" que optimiza y automatiza el registro de sus clientes.
