@@ -1,6 +1,7 @@
 # ClinicarProyect 🚗
 
-![Captura de pantalla 2023-12-02 132551](https://github.com/developermaster22/ClinicarProyect/assets/111548523/686737a8-4ac0-405c-903e-bcc52967edac)
+
+![Uploading Amarillo_Profesional_Gradiente_Desarrollo_de_App_Banner_Apaisado_1.png…]()
 
 
 
