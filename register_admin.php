@@ -9,11 +9,11 @@ try {
     $stmt = $conn->prepare("INSERT INTO `user_admin` (`usuario`, `contraseña`) VALUES (:usuario, :contrasena)");
 
     // Encriptar la contraseña
-    $hashedPassword = password_hash("admin", PASSWORD_DEFAULT);
+    $hashedPassword = password_hash("kevindgp", PASSWORD_DEFAULT);
 
     // Vincular los parámetros y ejecutar
     $stmt->execute(array(
-        "usuario" => "admin",
+        "usuario" => "kevin",
         "contrasena" => $hashedPassword // Asegúrate de que esto coincide con el nombre del marcador en la sentencia SQL.
     ));
 
