@@ -1,5 +1,17 @@
-# ClinicarProyect
+# ClinicarProyect 🚗
+
+
+
+
+
+![Amarillo_Profesional_Gradiente_Desarrollo_de_App_Banner_Apaisado_1](https://github.com/developermaster22/ClinicarProyect/assets/111548523/8b127d19-484c-42ca-a475-0d194641d016)
+
+
+
+
 Solución enfocada al negocio "Clinicar" que optimiza y automatiza el registro de sus clientes.
+
+
 # Historias de usuario:
 1. Como dueño del taller automotriz , quiero poder registrar a nuevos clientes en el sistema para tener un registro digital de su información.
 
@@ -40,7 +52,7 @@ Solución enfocada al negocio "Clinicar" que optimiza y automatiza el registro d
 
 11.Modelamiento de Proceso de Negocio: realización de los diagramas para representar las historias de los usuarios 
 
-12.Taller de Análisis de Sistemas: 
+12.Taller de Análisis de Sistemas: creacion de el sitio web happy pet
 
 13. Taller de Testing y Calidad de Software: se realizarán casos de pruebas y se ejecutarán dentro del sistema buscando lograr tener la mayor calidad del software  
 
