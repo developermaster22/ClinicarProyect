@@ -55,7 +55,6 @@
           <form method="POST" action="add.php">
             <div class="mb-3 row">
                 <label for="patente" class="col-md-4 col-form-label text-md-end">Patente</label>
-
                 <div class="col-md-6">
                   <input id="patente" type="text" class="form-control" name="patente" placeholder = "Ingrese la patente" require autocomplete="rut" autofocus>
                 </div>

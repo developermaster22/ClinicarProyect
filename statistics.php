@@ -19,9 +19,16 @@ try {
 $fecha_actual = date("Y-m-d");
 
 // Consultar los servicios realizados hoy
-$statement = $conn->prepare("SELECT * FROM servicio_info WHERE DATE(fecha_servicio) = :fecha_actual");
-$statement->bindParam(":fecha_actual", $fecha_actual);
+$fecha_actual = date("Y-m-d H:i:s");
+
+$fecha_inicio = $fecha_actual . " 00:00:00";
+$fecha_fin = $fecha_actual . " 23:59:59";
+
+$statement = $conn->prepare("SELECT * FROM servicio_info WHERE fecha_servicio BETWEEN :fecha_inicio AND :fecha_fin");
+$statement->bindParam(":fecha_inicio", $fecha_inicio);
+$statement->bindParam(":fecha_fin", $fecha_fin);
 $statement->execute();
+
 
 // Obtener resultados
 $servicios = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -38,25 +45,21 @@ $servicios = $statement->fetchAll(PDO::FETCH_ASSOC);
     <h2>Servicios de Hoy</h2>
 
     <?php if (count($servicios) > 0) : ?>
-        <table border="1">
-            <tr>
-                <th>ID</th>
+        <table class="container pt-5" border="4">
+            <tr class ="">
                 <th>Cliente</th>
                 <th>Vehículo</th>
                 <th>Tipo de Servicio</th>
                 <th>Fecha de Servicio</th>
-                <th>Número de Servicio</th>
                 <th>Patente Asociada</th>
             </tr>
             <?php foreach ($servicios as $servicio) : ?>
                 <tr>
-                    <td><?php echo $servicio['id']; ?></td>
-                    <td><?php echo $servicio['cliente_id']; ?></td>
-                    <td><?php echo $servicio['vehiculo_id']; ?></td>
-                    <td><?php echo $servicio['tipo_servicio']; ?></td>
-                    <td><?php echo $servicio['fecha_servicio']; ?></td>
-                    <td><?php echo $servicio['n_servicio']; ?></td>
-                    <td><?php echo $servicio['patente_asoc']; ?></td>
+                    <td style="width: 300px"><?php echo $servicio['nombre']; ?></td>
+                    <td style="width: 200px;"><?php echo $servicio['marca'].''.$servicio['modelo']; ?></td>
+                    <td style="width: 250px;"><?php echo $servicio['tipo_servicio']; ?></td>
+                    <td style="width: 150px;"><?php echo $servicio['fecha_servicio']; ?></td>
+                    <td style="width: 150px;"><?php echo $servicio['patente_asoc']; ?></td>
                 </tr>
             <?php endforeach; ?>
         </table>
