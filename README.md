@@ -1,62 +1,47 @@
-# ClinicarProyect 🚗
+# Clinicar Next
 
+Migracion inicial de `Clinicar` desde PHP a una base moderna con `Next.js + React + Supabase`, manteniendo la idea del `WORK ORDER.xlsx` como formulario principal del negocio.
 
+## Que incluye
 
+- Login privado con `Supabase Auth`.
+- Dashboard con busqueda por `patente/chapa`.
+- Busqueda robusta por patente normalizada, incluso con guiones, espacios o formatos distintos.
+- Formulario de orden de trabajo inspirado en el Excel original.
+- Tipos de vehiculo con checks propios: `City Car`, `SUV`, `Sedan`, `Camioneta`, `Furgon` y `Moto`.
+- Servicios separados para autos y motos.
+- Informes filtrables por servicio, tipo de vehiculo y rango de fechas.
+- Moneda operativa en `pesos chilenos (CLP)`.
+- SQL base para Supabase con tablas, relaciones y politicas RLS.
 
+## Estructura
 
-![Amarillo_Profesional_Gradiente_Desarrollo_de_App_Banner_Apaisado_1](https://github.com/developermaster22/ClinicarProyect/assets/111548523/8b127d19-484c-42ca-a475-0d194641d016)
+- [app](/home/sm-des/ClinicarProyect/app): App Router de Next.js.
+- [components](/home/sm-des/ClinicarProyect/components): login, shell del dashboard y formulario de work-order.
+- [lib](/home/sm-des/ClinicarProyect/lib): constantes del negocio, tipos y clientes de Supabase.
+- [supabase/schema.sql](/home/sm-des/ClinicarProyect/supabase/schema.sql): modelo de datos inicial para la nueva base.
+- [public/logo-clinicar.jpeg](/home/sm-des/ClinicarProyect/public/logo-clinicar.jpeg): logo usado en login y dashboard.
 
+## Levantar el proyecto
 
+1. Instala dependencias con `npm install`.
+2. Copia `.env.example` a `.env.local`.
+3. Configura `NEXT_PUBLIC_SUPABASE_URL` y `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+4. Ejecuta `supabase/schema.sql` en tu proyecto Supabase.
+5. Crea al menos un usuario en `Authentication > Users`.
+6. Inicia con `npm run dev`.
 
+## Modelo funcional nuevo
 
-Solución enfocada al negocio "Clinicar" que optimiza y automatiza el registro de sus clientes.
+1. Un usuario autenticado entra al panel privado.
+2. Busca una `patente`; si ya existe, el sistema trae cliente y vehiculo.
+3. Carga la orden con recepcion, lubricentro, servicios y total.
+4. El sistema guarda cliente, vehiculo, orden y detalle de servicios.
+5. Los informes permiten discriminar luego por servicio y tipo de vehiculo.
 
+## Siguiente fase recomendada
 
-# Historias de usuario:
-1. Como dueño del taller automotriz , quiero poder registrar a nuevos clientes en el sistema para tener un registro digital de su información.
-
-2. Como empleado del taller automotriz , quiero poder buscar clientes existentes por su nombre, número de teléfono o placa del vehículo para acceder rápidamente a su información.
-
-3. Como empleado del taller automotriz , quiero poder agregar notas y comentarios a los perfiles de los clientes para mantener un historial detallado de sus visitas anteriores y necesidades.
-
-4. Como empleado del taller automotriz , quiero poder programar citas para los clientes y vincularlas a sus perfiles, permitiendo un mejor seguimiento de las reservas.
-
-5. Como empleado del taller automotriz , quiero poder generar facturas electrónicas con detalles de los servicios proporcionados y enviárselas a los clientes por correo electrónico.
-
-6. Como empleado del taller automotriz , quiero poder generar informes que muestren la frecuencia de visitas de los clientes, los servicios más comunes solicitados y los ingresos generados por cada cliente.
-
-7. Como dueño del taller automotriz , quiero asegurarme de que la información del cliente se almacene de forma segura y se cumplan las regulaciones de privacidad de datos.
-
-
-# Relación Proyecto-Malla Curricular
-
-1.Fundamentos de Programación Computacional: programación orientada a objetos, trazabilidad, abstracción de datos  
-
-2.Introduccion a Requerimientos y Modelos de Negocios: toma de requerimientos y relación con el negocio abordado  
-
-3.Base de Datos Relacional: uso del lenguaje estructurado de consultas SQL, para crear una base de datos relacional 
-
-4.Taller de Programación: creación de soluciones o sistemas con un fin en especifico  
-
-5.Taller de Base de Datos: realización de una base de datos relacional para una solución en específico 
-
-6.Herramientas para la Innovación: renovar la forma en que se realiza la gestión de registros, mejorando en la sustentabilidad y la organización de su contabilidad  
-
-7.Programación Segura: se programará de manera segura este sistema, siendo comprobada la seguridad del mismo 
-
-8.Metodologías de Desarrollo de Software:  aquí se usará la metodología scrum 
-
-9.Taller de Aplicación para Internet: aquí se usará los lenguajes de programación (html,css,php), 
-
-10.Sustentabilidad de la Organización: el registro de los clientes pasara a un sistema en vez de papel 
-
-11.Modelamiento de Proceso de Negocio: realización de los diagramas para representar las historias de los usuarios 
-
-12.Taller de Análisis de Sistemas: creacion de el sitio web happy pet
-
-13. Taller de Testing y Calidad de Software: se realizarán casos de pruebas y se ejecutarán dentro del sistema buscando lograr tener la mayor calidad del software  
-
-14. Taller de Marca Personal: siguiendo los principios de este taller intentamos realizar un proyecto con nuestra marca y sello  
-
- 15. Taller de Proyecto de Especialidad: impulsar la creación del proyecto bajo los lineamientos que el módulo indica  
-
+1. Migrar los datos existentes MySQL/PHP a las tablas nuevas de Supabase.
+2. Agregar generacion de PDF o impresion para cada orden.
+3. Afinar permisos por rol si tendras admin, recepcion y operarios.
+4. Replicar con mas fidelidad el layout exacto del Excel si quieres impresion 1:1.
